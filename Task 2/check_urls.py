@@ -32,7 +32,7 @@ def process_csv(csv_file):
     Args:
         csv_file (str): Path to the CSV file containing URLs
     """
-    with open(csv_file, "r", encoding="utf-8") as file:
+    with open(csv_file, "r", encoding="utf-8-sig") as file:
         csv_reader = csv.DictReader(file)
         urls = [row["urls"].strip() for row in csv_reader]
 
